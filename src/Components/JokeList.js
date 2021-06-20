@@ -5,15 +5,23 @@ export default class JokeList extends Component {
   static defaultProps = {
     jokeStart: 10
   };
+
   constructor(props) {
     super(props);
     this.state = { jokes: [] };
-  }
+  };
+
   async componentDidMount() {
-    let joke = await axios.get('https://icanhazdadjoke.com/', {
-      headers: { Accept: "application/json" }
-    });
-  }
+    let jokes = [];
+    while (jokes.length < this.props.jokeStart) {
+      let res = await axios.get('https://icanhazdadjoke.com/', {
+        headers: { Accept: "application/json" }
+      });
+      jokes.push(res.data.joke);
+    }
+    console.log(jokes);
+  };
+
   render() {
     return (
       <div>

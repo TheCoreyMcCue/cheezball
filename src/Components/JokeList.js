@@ -19,13 +19,18 @@ export default class JokeList extends Component {
       });
       jokes.push(res.data.joke);
     }
-    console.log(jokes);
+    this.setState({ jokes: jokes });
   };
 
   render() {
     return (
-      <div>
+      <div className="JokeList">
         <h1>Bad Jokes</h1>
+        <div className="JokeList-jokes">
+          {this.state.jokes.map(j => (
+            <div>{j}</div>
+          ))}
+        </div>
       </div>
     )
   }

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import cry from '../../assets/cry.svg';
+import './JokeList.css';
 
 export default class JokeList extends Component {
   static defaultProps = {
@@ -25,7 +27,11 @@ export default class JokeList extends Component {
   render() {
     return (
       <div className="JokeList">
-        <h1>Bad Jokes</h1>
+        <div className="JokeList-side">
+          <h1 className="JokeList-title"><span>Bad</span> Jokes</h1>
+          <img src={cry} alt="" />
+          <button className="JokeList-new-jokes">New Jokes</button>
+        </div>
         <div className="JokeList-jokes">
           {this.state.jokes.map(j => (
             <div>{j}</div>

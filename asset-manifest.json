@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/cheezball/static/css/main.4ce29883.chunk.css",
-    "main.js": "/cheezball/static/js/main.2960889a.chunk.js",
-    "main.js.map": "/cheezball/static/js/main.2960889a.chunk.js.map",
+    "main.js": "/cheezball/static/js/main.78974c7e.chunk.js",
+    "main.js.map": "/cheezball/static/js/main.78974c7e.chunk.js.map",
     "runtime-main.js": "/cheezball/static/js/runtime-main.7bdc8c18.js",
     "runtime-main.js.map": "/cheezball/static/js/runtime-main.7bdc8c18.js.map",
     "static/js/2.9efceff1.chunk.js": "/cheezball/static/js/2.9efceff1.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.7bdc8c18.js",
     "static/js/2.9efceff1.chunk.js",
     "static/css/main.4ce29883.chunk.css",
-    "static/js/main.2960889a.chunk.js"
+    "static/js/main.78974c7e.chunk.js"
   ]
 }

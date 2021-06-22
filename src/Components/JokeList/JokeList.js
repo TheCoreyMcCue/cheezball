@@ -28,7 +28,7 @@ export default class JokeList extends Component {
     return (
       <div className="JokeList">
         <div className="JokeList-side">
-          <h1 className="JokeList-title"><span>Bad</span> Jokes</h1>
+          <h1 className="JokeList-title"><span>Timm</span> Jokes</h1>
           <img src={cry} alt="" />
           <button className="JokeList-new-jokes">New Jokes</button>
         </div>

@@ -19,7 +19,7 @@ export default class JokeList extends Component {
       let res = await axios.get('https://icanhazdadjoke.com/', {
         headers: { Accept: "application/json" }
       });
-      jokes.push(res.data.joke);
+      jokes.push({joke: res.data.joke, votes: 0});
     }
     this.setState({ jokes: jokes });
   };

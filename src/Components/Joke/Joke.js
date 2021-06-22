@@ -11,6 +11,9 @@ export default class Joke extends Component {
           <i className="fas fa-arrow-down" onClick={this.props.downvote}></i>
         </div>
         <div className="Joke-text">{this.props.text}</div>
+        <div className="Joke-smile">
+          <i className="em em-rolling_on_the_floor_laughing"></i>
+        </div>
       </div>
     )
   }

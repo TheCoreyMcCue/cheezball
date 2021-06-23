@@ -21,7 +21,7 @@
 
 .JokeList-title {
   font-size: 4vw;
-  margin: 2rem;
+  /* margin: 2rem; */
   color: white;
   font-weight: 300;
   letter-spacing: 0.5rem;
@@ -46,8 +46,38 @@
   justify-content: center;
 }
 
+.JokeList-new-jokes {
+  font-size: 1.5rem;
+  width: 50%;
+  border-radius: 2rem;
+  padding: 1rem 2rem;
+  color: white;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(88,88,133,1) 35%, rgba(0,212,255,1) 100%);
+  font-weight: 700;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin: 3%;
+  transition: 0.8s cubic-bezier(0.2, 1, 0.2, 1);
+  box-shadow: 5px 5px 5px 0px #797272, inset 4px 4px 15px 0px #797272, 5px 5px 15px 5px rgba(23,131,255,0);
+}
+.JokeList-new-jokes:hover {
+  box-shadow: 2px 2px 2px 0px #797272, inset 2px 2px 7px 0px #797272, 2px 2px 7px 2px rgba(23,131,255,0);
+  transform: translateY(-2px);
+}
+
+.timm-img{
+  border-radius: 25%;
+  margin-bottom: 40%;
+}
+
 @media only screen and (max-width: 600px) {
   .JokeList-side {
     width: 40%;
+  }
+  .JokeList-new-jokes {
+    font-size: 0.1rem;
+    border-radius: 0.8rem;
+    padding: 0.5rem 0.8rem;
   }
 }

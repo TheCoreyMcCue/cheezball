@@ -36,6 +36,42 @@
   font-size: 100%;
   margin: 7%;
   cursor: pointer;
+  transition: all 0.3s;
+}
+.fa-arrow-up:hover {
+  animation-name: move-up;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-out;
+  color: #38b000;
+}
+@keyframes move-up {
+  0%,
+  50%,
+  100% {
+  transform: translateY(0);
+  }
+  25%,
+  75% {
+    transform: translateY(-3px);
+  }
+}
+
+.fa-arrow-down:hover {
+  animation-name: move-down;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-out;
+  color: #d90429;
+}
+@keyframes move-down {
+  0%,
+  50%,
+  100% {
+  transform: translateY(0);
+  }
+  25%,
+  75% {
+    transform: translateY(3px);
+  }
 }
 
 .Joke-smile {
@@ -43,6 +79,28 @@
   margin-left: 5%;
   border-radius: 50%;
   box-shadow: 5px 5px 5px 0px #cec9c9, inset 4px 4px 15px 0px #cec9c9, 5px 5px 15px 5px rgba(23,131,255,0);
+}
+.Joke-smile:hover {
+  animation-name: spin;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-in-out;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg)
+  }
+  30% {
+    transform: rotate(20deg)
+  }
+  60% {
+    transform: rotate(0deg)
+  }
+  80% {
+    transform: rotate(10deg)
+  }
+  100% {
+    transform: rotate(0deg)
+  }
 }
 
 

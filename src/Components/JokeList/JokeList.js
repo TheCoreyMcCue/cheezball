@@ -4,7 +4,9 @@ import { v4 as uuidv4 } from 'uuid';
 
 import Joke from '../Joke/Joke';
 
-import cry from '../../assets/cry.svg';
+// import cry from '../../assets/cry.svg';
+import timm from '../../assets/timm.png'
+
 import './JokeList.css';
 
 export default class JokeList extends Component {
@@ -75,7 +77,7 @@ export default class JokeList extends Component {
       <div className="JokeList">
         <div className="JokeList-side">
           <h1 className="JokeList-title"><span>Timm</span> Jokes</h1>
-          <img src={cry} alt="" />
+          <img src={timm} alt="" className="timm-img" />
           <button className="JokeList-new-jokes" onClick={this.handleClick}>Get More Jokes</button>
         </div>
         <div className="JokeList-jokes">

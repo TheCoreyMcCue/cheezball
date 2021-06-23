@@ -17,6 +17,7 @@ export default class JokeList extends Component {
     this.state = {
       jokes: JSON.parse(window.localStorage.getItem("jokes") || "[]")
     };
+    this.handleClick = this.handleClick.bind(this);
   };
 
   componentDidMount() {
@@ -33,8 +34,9 @@ export default class JokeList extends Component {
       });
       jokes.push({ id: uuidv4(), text: res.data.joke, votes: 0 });
     }
-    this.setState({ jokes: jokes });
-    window.localStorage.setItem("jokes", JSON.stringify(jokes));
+    this.setState(st => ({
+      jokes: [...st.jokes, ...jokes]
+    }), () => window.localStorage.setItem("jokes", JSON.stringify(this.state.jokes)));
   }
 
 
@@ -42,7 +44,12 @@ export default class JokeList extends Component {
     this.setState(st => ({
       jokes: st.jokes.map(j =>
         j.id === id ? { ...j, votes: j.votes + delta } : j)
-    }));
+    }), () => window.localStorage.setItem("jokes", JSON.stringify(this.state.jokes))
+    );
+  };
+
+  handleClick() {
+    this.getJokes();
   }
 
   render() {
@@ -51,7 +58,7 @@ export default class JokeList extends Component {
         <div className="JokeList-side">
           <h1 className="JokeList-title"><span>Timm</span> Jokes</h1>
           <img src={cry} alt="" />
-          <button className="JokeList-new-jokes">New Jokes</button>
+          <button className="JokeList-new-jokes" onClick={this.handleClick}>Get More Jokes</button>
         </div>
         <div className="JokeList-jokes">
           {this.state.jokes.map(j => (

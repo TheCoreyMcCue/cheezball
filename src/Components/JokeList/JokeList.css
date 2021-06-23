@@ -40,3 +40,8 @@
   box-shadow: 5px 5px 5px 0px #bbb4b4, inset 4px 4px 15px 0px #bbb4b4, 5px 5px 15px 5px rgba(23,131,255,0);
 }
 
+@media only screen and (max-width: 600px) {
+  .JokeList-side {
+    width: 40%;
+  }
+}

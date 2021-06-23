@@ -21,6 +21,24 @@ export default class Joke extends Component {
     }
   };
 
+  getEmoji() {
+    if (this.props.votes >= 10) {
+      return "em em-rolling_on_the_floor_laughing";
+    } else if (this.props.votes >= 7) {
+      return "em em-laughing"
+    } else if (this.props.votes >= 5) {
+      return "em em-smiley"
+    } else if (this.props.votes >= 3) {
+      return "em em-slightly_smiling_face"
+    } else if (this.props.votes >= 2) {
+      return "em em-neutral_face"
+    } else if (this.props.votes >= 0) {
+      return "em em-confused"
+    } else {
+      return "em em-angry"
+    }
+  }
+
   render() {
     return (
       <div className="Joke">
@@ -31,7 +49,7 @@ export default class Joke extends Component {
         </div>
         <div className="Joke-text">{this.props.text}</div>
         <div className="Joke-smile">
-          <i className="em em-rolling_on_the_floor_laughing"></i>
+          <i className={this.getEmoji()}></i>
         </div>
       </div>
     )
